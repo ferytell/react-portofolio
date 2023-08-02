@@ -1,3 +1,23 @@
+# first
+```npx create-react-app react-portofolio ```
+```npm install react-bootstrap bootstrap react-bootstrap-icons```
+```npm install react-on-screen react-router-dom react-router-hash-link```
+```npm i react-multi-carousel```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
