@@ -2,43 +2,55 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img.png";
 import projImg2 from "../assets/img/project-img.png";
-import projImg3 from "../assets/img/project-img.png";
-import colorSharp2 from "../assets/img/color-sharp2.png";
+import colorSharp2 from "../assets/img/color-sharp-1.png";
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
 export const Projects = () => {
 
-  const projects = [
+
+  const projectBE = [
     {
-      title: "Golang Backend",
-      description: "Capstone Hactiv8",
-      imgUrl: projImg1,
+      title: "Project MyGram",
+      description: "Final Project for passing Hactiv8 Golang Class, CRUD Rest API for (social media for sharing, like and commenting a photos)",
+      imgUrl: "https://github.com/ferytell/go-jwt/raw/master/docs/image.png",
+      link: "https://github.com/ferytell/go-jwt"
     },
     {
       title: "NodeJs x Hapi Backend",
-      description: "Dicoding Submission",
+      description: "Dicoding Submission, CRUD Rest API for storing books data",
       imgUrl: projImg2,
+      link: "https://github.com/ferytell/back-end-dicoding-submission"
     },
     {
-      title: "",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "MKSA Quality Checker",
+      description: "Capstone Project Bangkit 2022, AI website for scoring a article conclusion",
+      imgUrl: "https://raw.githubusercontent.com/ferytell/Puk6/master/assets/er.PNG",
+      link: "https://github.com/pukulenam/FrontEnd_MKSA_Quality_Checker"
     },
+  ];
+
+  const projectFE = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "React Portofolio",
+      description: "Simple Portofolio website using react",
       imgUrl: projImg1,
+      link: "https://github.com/ferytell/react-portofolio"
+    },
+  ];
+
+  const projectApps = [
+    {
+      title: "Flappish",
+      description: "Silly game write using python",
+      imgUrl: "https://github.com/ferytell/Flappish/raw/master/assets/image.png",
+      link: "https://github.com/ferytell/Flappish/tree/master"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+      title: "Spacer",
+      description: "Simple shooter game, wrote with python pygame",
+      imgUrl: "https://github.com/ferytell/spacer/raw/master/image.png",
+      link: "https://github.com/ferytell/spacer"
+    }
   ];
 
   return (
@@ -67,7 +79,7 @@ export const Projects = () => {
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
-                          projects.map((project, index) => {
+                          projectBE.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
@@ -78,11 +90,33 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                      <Row>
+                        {
+                          projectFE.map((project, index) => {
+                              return (
+                                <ProjectCard
+                                  key={index}
+                                  {...project}
+                                  />
+                              )
+                            })
+                        }
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <Row>
+                      {
+                        projectApps.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                        </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
@@ -91,7 +125,8 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      
+      <img className="background-image-left" src={colorSharp2} alt="Image" />
     </section>
   )
 }

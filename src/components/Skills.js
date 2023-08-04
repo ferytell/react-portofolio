@@ -1,11 +1,6 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-//import arrow1 from "../assets/img/arrow1.svg";
-//import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
+import colorSharp from "../assets/img/color-sharp-1.png"
 import Doughnut from "./Doughnut";
 import './doughnut.css';
 
@@ -29,8 +24,8 @@ export const Skills = () => {
     }
   };
 
-  const percentage = ['70%', '20%', '40%', '10%'];
-  const names = ['JS','Go','Python', 'Java'];
+  const percentage = ['70%', '45%', '60%', '30%','60%','20%' ];
+  const names = ['JS','Go','Python', 'Java','CSS','Art' ];
   return (
     <section className="skill" id="skills">
         <div className="container">
@@ -38,22 +33,28 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>Skill proficiency can often be subjective and context-dependent. I know assigning percentages might oversimplify my actual skill level, especially for complex skills like programming languages, where capability can vary based on the task, but its look cool so I included it.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                               <Doughnut persentase={{ value: percentage[0] }} aktifitas={{ activity: names[0] }} />
                             </div>
                             <div className="item">
                               <Doughnut persentase={{ value: percentage[1] }} aktifitas={{ activity: names[1] }} />
-                                
                             </div>
                             <div className="item">
                               <Doughnut persentase={{ value: percentage[2] }} aktifitas={{ activity: names[2] }} />
                             </div>
                             <div className="item">
                               <Doughnut persentase={{ value: percentage[3] }} aktifitas={{ activity: names[3] }} />
+                            </div>
+                            <div className="item">
+                              <Doughnut persentase={{ value: percentage[4] }} aktifitas={{ activity: names[4] }} />
+                            </div>
+                            <div className="item">
+                              <Doughnut persentase={{ value: percentage[5] }} aktifitas={{ activity: names[5] }} />
                               <h5> .</h5>
                             </div>
+                            
                         </Carousel>
                     </div>
                 </div>
