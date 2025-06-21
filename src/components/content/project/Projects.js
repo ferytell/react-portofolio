@@ -6,7 +6,6 @@ import shareStory from "../../../assets/img/ScreenshotShareStory.png";
 import colorSharp2 from "../../../assets/img/color-sharp-1.png";
 import TrackVisibility from "react-on-screen";
 import "animate.css";
-import { Github } from "react-bootstrap-icons";
 export const Projects = () => {
   const projectBE = [
     {
