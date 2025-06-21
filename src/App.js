@@ -1,24 +1,22 @@
-import './App.css';
-import { NavBar } from "./components/NavBar";
-import { Banner } from "./components/Banner";
-import { Skills } from "./components/Skills";
-import { Projects } from "./components/Projects";
-import { Contact } from "./components/Contact";
-import {Footer} from "./components/Footer";
-
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "./App.css";
+import { NavBar } from "./components/header/NavBar";
+import { Banner } from "./components/content/banner";
+import { Projects } from "./components/content/project/Projects";
+import { Contact } from "./components/content/contact";
+import { Footer } from "./components/footer/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Skills from "./components/content/skills/index";
 
 function App() {
   return (
     <div className="App">
-       <NavBar />
-       <Banner />
-       <Skills />
-       <Projects />
-       <Contact />
-       <Footer />
+      <NavBar />
+      <Banner />
+      <Skills />
+      <Projects />
+
+      <Contact />
+      <Footer />
     </div>
   );
 }

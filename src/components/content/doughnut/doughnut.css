@@ -1,12 +1,14 @@
 @keyframes donut-chart-fill {
-  to { stroke-dasharray: 0 100; }
+  to {
+    stroke-dasharray: 0 100;
+  }
 }
 body {
   font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
-  color: #5bc8af;  
+  color: #5bc8af;
 }
 .svg-item {
   width: 170px;
@@ -20,7 +22,6 @@ body {
   animation: donut-chart-fill 1s reverse ease-in;
   transform-origin: center;
   stroke: #b030b0;
-  
 }
 
 .donut-label {
@@ -28,7 +29,7 @@ body {
   font-weight: 700;
   line-height: 1;
   fill: #d83b3b;
-  transform: translateY(0.25em);    
+  transform: translateY(0.25em);
 }
 .donut-percent {
   font-size: 0.4em;
@@ -38,6 +39,6 @@ body {
   border-radius: 10em;
 }
 .donut-text {
-  font-family: 'Centra', sans-serif !important;
+  font-family: "Centra", sans-serif !important;
   fill: #b030b0;
 }
